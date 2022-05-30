@@ -23,6 +23,7 @@ $(() => {
         $('#playerOne').addClass('dotPlayer')
         $('#playerTwo').removeClass()
         $('#rollDice').prop('disabled', false)
+        $('#hold').prop('disabled', false);
         $('#bg-player').removeClass('player1 player2').addClass('player1');
         alert('Nouvelle partie lancée !');
     });
@@ -117,11 +118,13 @@ $(() => {
             console.log(globalOne)
             alert('Joueur 1 a gagné !');
             $('#rollDice').prop('disabled', true);
+            $('#hold').prop('disabled', true);
         }
         if (globalTwo >= 100) {
             console.log(globalTwo);
             alert('Joueur 2 a gagné !');
             $('#rollDice').prop('disabled', true);
+            $('#hold').prop('disabled', true);
         }
     });
 })
