@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game 2 players</title>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="bg-player" class="player1">
+        <div id="header">
+            <button id="newGame">
+                <span id="game" class="lnr lnr-plus-circle"></span> NEW GAME
+            </button>
+        </div>
+        <div id="players">
+            <div class="playerN">
+                <p>
+                    PLAYER 1
+                    <span id="playerOne" class="dotPlayer"></span>
+                </p>
+            </div>
+            <div class="playerN">
+                <p>
+                    <span id="playerTwo" class="dotPlayer"></span> PLAYER 2
+                </p>
+            </div>
+        </div>
+        <div id="scores">
+            <p id="roundOne" class="results">0</p>
+            <div class="dice">
+                <div id="one" class="one"></div>
+                <div id="two" class="two"></div>
+                <div id="three" class="three"></div>
+                <div id="four" class="four"></div>
+                <div id="five" class="five"></div>
+                <div id="six" class="six"></div>
+                <div id="seven" class="seven"></div>
+            </div>
+            <p id="roundTwo" class="results">0</p>
+        </div>
+        <div id="rolls">
+            <div id="current-1">
+                <p class="current">CURRENT</p>
+                <p id="globalOne">0</p>
+            </div>
+            <div id="play">
+                <button id="rollDice" class="game-buttons">
+                    <span id="roll" class="lnr lnr-sync"> </span> ROLL DICE
+                </button>
+                <button id="hold" class="game-buttons">
+                    <span id="holdButton" class="lnr lnr-enter-down"></span> HOLD
+                </button>
+
+            </div>
+            <div id="current-2">
+                <p class="current">CURRENT</p>
+                <p id="globalTwo">0</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

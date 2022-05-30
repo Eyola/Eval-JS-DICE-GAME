@@ -1,0 +1,234 @@
+html {
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+button {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+section {
+    max-width: 60rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 10px solid #bf6354cc;
+}
+
+#players,
+#scores,
+#rolls {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#scores {
+    margin: -2.6rem 0 4rem 0;
+}
+
+#rolls {
+    margin-bottom: 4rem;
+}
+
+#header,
+#play {
+    font-size: 1.4rem;
+    padding: 1rem 1rem;
+}
+
+#header:hover,
+#rollDice:hover,
+#hold:hover {
+    background-color: rgba(255, 0, 0, 0.685);
+}
+
+#players {
+    font-size: 2.2rem;
+}
+
+#play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#game,
+#roll,
+#holdButton {
+    margin-right: 0.6rem;
+    color: red;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.playerN {
+    display: flex;
+    align-items: center;
+}
+
+.player1 {
+    background: linear-gradient(90deg, rgba(80, 80, 80, 0.12) 50%, rgb(255, 255, 255) 50%);
+}
+
+.player2 {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 100%) 50%, rgba(80, 80, 80, 0.12) 50%);
+}
+
+.dotPlayer {
+    width: 1rem;
+    background: rgba(255, 0, 0, 0.685);
+    height: 1rem;
+    border-radius: 50%;
+    margin: 0 2rem
+}
+
+#current-1,
+#current-2 {
+    box-sizing: border-box;
+    background-color: rgba(255, 0, 0, 0.685);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    margin: 0 1.4rem;
+}
+
+#globalOne,
+#globalTwo,
+#current-score-2 {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+.current {
+    margin: 0 1rem 1rem;
+    font-size: 0.6rem;
+}
+
+.results {
+    color: red;
+    font-size: 5rem;
+    font-weight: 200;
+    margin: 0;
+}
+
+#players>p,
+#scores>p {
+    width: 10rem;
+    justify-content: center;
+}
+
+#rolls>div {
+    width: 7.5rem;
+    justify-content: center;
+}
+
+.game-buttons {
+    margin: 0rem -2rem;
+    padding: 0.5rem 1rem
+}
+
+.actual-gamer {
+    background: #d3d3d39e;
+}
+
+.dice {
+    display: grid;
+    grid-template-columns: repeat(3, 1rem);
+    grid-template-rows: repeat(3, 1rem);
+    grid-gap: 1rem;
+    justify-items: center;
+    box-shadow: 0px 0px 3px 1px #8e838a;
+    align-items: center;
+    justify-items: center;
+    padding: 0.5rem;
+    background: white;
+}
+
+.one {
+    width: 1rem;
+    background: rgba(255, 0, 0, 0.685);
+    height: 1rem;
+    border-radius: 50%;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.two {
+    width: 1rem;
+    background: rgba(255, 0, 0, 0.685);
+    height: 1rem;
+    border-radius: 50%;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.three {
+    width: 1rem;
+    background: rgba(255, 0, 0, 0.685);
+    height: 1rem;
+    border-radius: 50%;
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.four {
+    width: 1rem;
+    background: rgba(255, 0, 0, 0.685);
+    height: 1rem;
+    border-radius: 50%;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.five {
+    width: 1rem;
+    background: rgba(255, 0, 0, 0.685);
+    height: 1rem;
+    border-radius: 50%;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.six {
+    width: 1rem;
+    background: rgba(255, 0, 0, 0.685);
+    height: 1rem;
+    border-radius: 50%;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.seven {
+    width: 1rem;
+    background: rgba(255, 0, 0, 0.685);
+    height: 1rem;
+    border-radius: 50%;
+    grid-column: 3;
+    grid-row: 2;
+}
