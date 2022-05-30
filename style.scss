@@ -157,7 +157,7 @@ body {
     background: #d3d3d39e;
 }
 
-.dice {
+#dice {
     display: grid;
     grid-template-columns: repeat(3, 1rem);
     grid-template-rows: repeat(3, 1rem);
@@ -172,6 +172,7 @@ body {
 
 .one {
     width: 1rem;
+    display: none;
     background: rgba(255, 0, 0, 0.685);
     height: 1rem;
     border-radius: 50%;
@@ -181,6 +182,7 @@ body {
 
 .two {
     width: 1rem;
+    display: none;
     background: rgba(255, 0, 0, 0.685);
     height: 1rem;
     border-radius: 50%;
@@ -190,6 +192,7 @@ body {
 
 .three {
     width: 1rem;
+    display: none;
     background: rgba(255, 0, 0, 0.685);
     height: 1rem;
     border-radius: 50%;
@@ -199,6 +202,7 @@ body {
 
 .four {
     width: 1rem;
+    display: none;
     background: rgba(255, 0, 0, 0.685);
     height: 1rem;
     border-radius: 50%;
@@ -208,6 +212,7 @@ body {
 
 .five {
     width: 1rem;
+    display: none;
     background: rgba(255, 0, 0, 0.685);
     height: 1rem;
     border-radius: 50%;
@@ -217,6 +222,7 @@ body {
 
 .six {
     width: 1rem;
+    display: none;
     background: rgba(255, 0, 0, 0.685);
     height: 1rem;
     border-radius: 50%;
@@ -225,10 +231,50 @@ body {
 }
 
 .seven {
+    display: none;
     width: 1rem;
     background: rgba(255, 0, 0, 0.685);
     height: 1rem;
     border-radius: 50%;
     grid-column: 3;
     grid-row: 2;
+}
+
+#dice.dice1 .one {
+    display: block;
+}
+
+#dice.dice2 .two,
+#dice.dice2 .three {
+    display: block;
+}
+
+#dice.dice3 .one,
+#dice.dice3 .two,
+#dice.dice3 .three {
+    display: block;
+}
+
+#dice.dice4 .two,
+#dice.dice4 .three,
+#dice.dice4 .four,
+#dice.dice4 .five {
+    display: block;
+}
+
+#dice.dice5 .one,
+#dice.dice5 .two,
+#dice.dice5 .three,
+#dice.dice5 .four,
+#dice.dice5 .five {
+    display: block;
+}
+
+#dice.dice6 .two,
+#dice.dice6 .three,
+#dice.dice6 .four,
+#dice.dice6 .five,
+#dice.dice6 .six,
+#dice.dice6 .seven {
+    display: block;
 }

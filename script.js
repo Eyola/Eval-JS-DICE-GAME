@@ -7,7 +7,7 @@ $(() => {
     let dice = 0;
     $('#playerTwo').removeClass()
     $('.dice div').removeClass('one')
-
+    let currentPlayer = false;
     const win = 100;
 
     $('#header').click(function newGame() {
@@ -16,14 +16,10 @@ $(() => {
         roundOne = 0;
         roundTwo = 0;
         dice = 0;
-        $('#roundOne').html('0');
-        $('#globalOne').html('0');
-        $('#roundTwo').html('0');
-        $('#globalTwo').html('0');
+        $('#roundOne, #globalOne, #roundTwo, #globalTwo').html('0');
         $('#playerOne').addClass('dotPlayer')
         $('#playerTwo').removeClass()
-        $('#rollDice').prop('disabled', false)
-        $('#hold').prop('disabled', false);
+        $('#rollDice, #hold').prop('disabled', false)
         $('#bg-player').removeClass('player1 player2').addClass('player1');
         alert('Nouvelle partie lancée !');
     });
@@ -31,7 +27,7 @@ $(() => {
     $('#rollDice').click(function rollDice() {
         dice = Math.ceil(Math.random() * 6);
         console.log(dice)
-        if ($('#playerOne').hasClass('dotPlayer')) {
+        if (!currentPlayer) {
             roundOne += dice
             $('#roundOne').html(roundOne)
             if (dice == 1) {
@@ -42,7 +38,7 @@ $(() => {
                 $('#playerTwo').addClass('dotPlayer')
                 $('#bg-player').removeClass('player1 player2').addClass('player2')
             }
-        } else if ($('#playerTwo').hasClass('dotPlayer')) {
+        } else {
             roundTwo += dice
             $('#roundTwo').html(roundTwo)
             if (dice == 1) {
@@ -54,66 +50,28 @@ $(() => {
                 $('#bg-player').removeClass('player1 player2').addClass('player1')
             }
         }
-        if (dice == 1) {
-            $('.dice div').removeClass()
-            $('#one').addClass('one')
-        }
-        if (dice == 2) {
-            $('.dice div').removeClass()
-            $('#two').addClass('two')
-            $('#three').addClass('three')
-        }
-        if (dice == 3) {
-            $('.dice div').removeClass()
-            $('#one').addClass('one')
-            $('#two').addClass('two')
-            $('#three').addClass('three')
-        }
-        if (dice == 4) {
-            $('.dice div').removeClass()
-            $('#two').addClass('two')
-            $('#three').addClass('three')
-            $('#four').addClass('four')
-            $('#five').addClass('five')
-        }
-        if (dice == 5) {
-            $('.dice div').removeClass()
-            $('#one').addClass('one')
-            $('#two').addClass('two')
-            $('#three').addClass('three')
-            $('#four').addClass('four')
-            $('#five').addClass('five')
-        }
-        if (dice == 6) {
-            $('.dice div').removeClass()
-            $('#two').addClass('two')
-            $('#three').addClass('three')
-            $('#four').addClass('four')
-            $('#five').addClass('five')
-            $('#six').addClass('six')
-            $('#seven').addClass('seven')
-        }
-        return dice;
+        $('#dice').removeClass().addClass('dice' + dice)
     });
 
     $('#hold').click(function hold() {
-        if ($('#playerOne').hasClass('dotPlayer')) {
+        if (!currentPlayer) {
             globalOne += roundOne;
             $('#globalOne').html(globalOne);
             roundOne = 0;
             $('#roundOne').html('0');
             $('#playerOne').removeClass()
-            $('#playerTwo').addClass('dotPlayer font')
+            $('#playerTwo').addClass('dotPlayer')
             $('#bg-player').removeClass('player1 player2').addClass('player2');
-        } else if ($('#playerTwo').hasClass('dotPlayer')) {
+        } else {
             globalTwo += roundTwo;
             $('#globalTwo').html(globalTwo);
             roundTwo = 0;
             $('#roundTwo').html('0');
             $('#playerTwo').removeClass()
-            $('#playerOne').addClass('dotPlayer font')
+            $('#playerOne').addClass('dotPlayer')
             $('#bg-player').removeClass('player1 player2').addClass('player1');
         }
+        currentPlayer = !currentPlayer
         if (globalOne >= 100) {
             console.log(globalOne)
             alert('Joueur 1 a gagné !');
